@@ -749,6 +749,11 @@ img {
   opacity: 1;
 
   transition: transform var(--transition-all);
+
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -802,13 +807,6 @@ img {
   font-weight: var(--font-medium);
 
   margin-bottom: 16px;
-}
-
-.form-container {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 72px;
-  padding-bottom: 24px;
 }
 
 .modal-form {
