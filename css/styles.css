@@ -532,6 +532,11 @@ img {
   background-color: var(--social-footer);
 }
 
+.footer-subscription-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-subscribtion-input {
   background-color: transparent;
   border-radius: 4px;
@@ -542,13 +547,11 @@ img {
   height: 40px;
 
   padding-left: 16px;
-  margin-right: 24px;
 
   color: var(--ligh-white);
 
   font-size: 12px;
 
-  line-height: 2; /* 200% */
   letter-spacing: 0.04em;
   cursor: pointer;
 
@@ -572,9 +575,14 @@ img {
   letter-spacing: 0.04em;
 
   padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
 
   display: flex;
   gap: 16px;
+
+  justify-content: center;
+  align-items: center;
 
   transition: background-color var(--transition-all);
 }
