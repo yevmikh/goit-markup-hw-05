@@ -932,13 +932,13 @@ img {
 }
 
 .checkbox-input:focus-visible ~ .checkbox-text > .checkbox-inactive {
-  border: none;
-  background-color: var(--active-color);
-  fill: var(--active-color);
+  border-color: var(--active-color);
 }
 
 .checkbox-input:checked ~ .checkbox-text > .checkbox-inactive {
-  background-color: var(--main-color);
+  background-color: var(--active-color);
+  fill: var(--active-color);
+  border: none;
 }
 
 .checkbox-input:checked
@@ -980,8 +980,7 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
 
-  transition: background-color var(--transition-all),
-    outline var(--transition-all);
+  transition: background-color var(--transition-all);
   display: block;
   align-items: center;
   justify-content: center;
