@@ -502,11 +502,11 @@
             </div>
           </div>
           <div class="textarea-flex">
-            <label for="textarea" class="form-label"> Comment</label>
+            <label for="user_comment" class="form-label"> Comment</label>
 
             <textarea
-              name="user_feedback"
-              id="textarea"
+              name="user_comment"
+              id="user_comment"
               class="form-textarea form-outline"
               placeholder="Text input"
               required
@@ -516,20 +516,20 @@
             <input
               type="checkbox"
               class="visually-hidden checkbox-input"
-              id="user_privacy"
-              name="privacy_accepted"
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
               required
             />
-            <label for="user_privacy" class="checkbox-text">
+            <label for="user-privacy" class="checkbox-text">
               <span class="checkbox-inactive">
                 <svg class="checkbox-active" width="10" height="8">
                   <use href="./images/icons.svg#icon-click"></use>
                 </svg>
               </span>
-              <span>
-                I accept the terms and conditions of the
-                <a href="" class="privacy">Privacy Policy</a>
-              </span>
+
+              I accept the terms and conditions of the
+              <a href="" class="privacy">Privacy Policy</a>
             </label>
           </div>
 
