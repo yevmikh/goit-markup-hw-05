@@ -496,6 +496,10 @@ img {
   margin-bottom: 16px;
 }
 
+.footer-social-flex {
+  margin-right: 80px;
+}
+
 .footer-social {
   display: flex;
   gap: 16px;
@@ -527,6 +531,70 @@ img {
 .footer-social-link:focus {
   background-color: var(--social-footer);
 }
+
+.footer-subscribtion-input {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--ligh-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  min-width: 264px;
+  height: 40px;
+
+  padding-left: 16px;
+  margin-right: 24px;
+
+  color: var(--ligh-white);
+
+  font-size: 12px;
+
+  line-height: 2; /* 200% */
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  transition: outline var(--transition-all);
+}
+
+.footer-subscribtion-input:hover {
+  outline: 1px solid var(--ligh-white);
+}
+
+.footer-subscribtion-button {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--main-color);
+
+  color: var(--ligh-white);
+  /* text-align: center; */
+
+  font-weight: var(--font-medium);
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+
+  padding: 8px 24px;
+
+  display: flex;
+  gap: 16px;
+
+  transition: background-color var(--transition-all);
+}
+
+.footer-subscribtion-button:hover,
+.footer-subscribtion-button:focus {
+  background-color: var(--active-color);
+}
+.footer-subscribtion-input::placeholder {
+  color: currentColor;
+}
+
+.subscribtion-button-icon {
+  fill: var(--ligh-white);
+}
+
+.footer-subscribtion-flex {
+  display: flex;
+}
+
 /**
   |============================
   | PORTFOLIO EXCLUSEVILY
@@ -629,7 +697,11 @@ img {
 .portfolio-table-link:is(:hover, :focus) .portfolio-overlay-text {
   transform: translateY(0%);
 }
-
+/**
+  |============================
+  | MODAL EXCLUSEVILY
+  |============================
+*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -711,6 +783,191 @@ img {
   fill: var(--header-text-color);
   transition: fill var(--transition-all);
 }
+
 .modal-button:is(:hover, :focus) .modal-close {
   fill: var(--ligh-white);
+}
+
+.form-header {
+  color: var(--header-text-color);
+  text-align: center;
+  font-weight: var(--font-medium);
+
+  margin-bottom: 16px;
+}
+
+.form-container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-form:not(:last-child) {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.form-input-header {
+  color: var(--customers-logo-color);
+  font-size: 12px;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.04em;
+
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form-outline {
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  outline: none;
+
+  transition: border-color var(--transition-all);
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 38px;
+}
+
+.form-client-item {
+  fill: var(--header-text-color);
+
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  transition: fill var(--transition-all);
+}
+
+.form-input-relative {
+  position: relative;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120px;
+
+  resize: none;
+
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.04em;
+
+  padding: 8px 16px;
+}
+
+.form-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-input:focus + .form-client-item {
+  fill: var(--main-color);
+}
+
+.form-outline:focus {
+  border-color: var(--main-color);
+}
+
+.checkbox-text {
+  color: var(--customers-logo-color);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.04em;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox-inactive {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border var(--transition-all);
+}
+
+.checkbox-input:focus-visible ~ .checkbox-text > .checkbox-inactive {
+  border: 1px solid var(--main-color);
+}
+
+.checkbox-active {
+  fill: transparent;
+}
+
+.checkbox-input:checked ~ .checkbox-text > .checkbox-inactive {
+  background-color: var(--main-color);
+}
+
+.checkbox-input:checked
+  ~ .checkbox-text
+  > .checkbox-inactive
+  > .checkbox-active {
+  fill: var(--ligh-white);
+}
+
+.privacy {
+  color: var(--main-color);
+
+  font-size: 12px;
+  line-height: 1.33;
+  outline: none;
+
+  transition: font-weight var(--transition-all), color var(--transition-all);
+}
+
+.privacy:hover,
+.privacy:focus {
+  font-weight: 500;
+  color: var(--active-color);
+}
+
+.form-button {
+  padding: 16px 32px;
+  color: var(--ligh-white);
+
+  margin: 0 96px;
+
+  font-weight: var(--font-medium);
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+
+  border-radius: 4px;
+  background: var(--main-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+
+  transition: background-color var(--transition-all),
+    outline var(--transition-all);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--active-color);
+  outline: none;
 }
